@@ -1,0 +1,16 @@
+Column_Name,Data_Type,Description,Permissible_Range_or_Values,Example_Value
+Date,Date (YYYY-MM-DD),Standardized calendar date of observation,2023-01-01 to 2024-08-31,2023-01-01
+Station,Character,Name of the continuous ambient air quality monitoring station,"Kodungaiyur, Koyambedu, Manali, Perungudi, Royapuram",Royapuram
+Source_Year,Integer,Calendar year from which the raw CPCB bulletin was sourced,2023 or 2024,2023
+Raw_Date,Character,Original unformatted date string as recorded in raw bulletin,Various text formats,01 January
+SO2_Numeric,Numeric,Sulfur Dioxide daily concentration in ug/m3,0 to 500 ug/m3,3.0
+NO2_Numeric,Numeric,Nitrogen Dioxide daily concentration in ug/m3,0 to 500 ug/m3,12.0
+CO_Numeric,Numeric,Carbon Monoxide daily concentration in mg/m3,0 to 50 mg/m3,0.5
+PM25_Numeric,Numeric,Fine Particulate Matter (PM2.5) daily concentration in ug/m3,0 to 999 ug/m3,10.0
+PM10_Numeric,Numeric,Coarse Particulate Matter (PM10) daily concentration in ug/m3,0 to 1000 ug/m3,27.0
+AQI_Numeric,Numeric,Overall Indian National Air Quality Index calculated value,0 to 500,27.0
+AQI_Category,Character,CPCB qualitative health risk band based on index value,"Good (0-50), Satisfactory (51-100), Moderate (101-200), Poor (201-300), Very Poor (301-400), Severe (401-500)",Good
+Is_Duplicate,Logical (Boolean),Flag indicating identical Date and Station combination,TRUE or FALSE,FALSE
+Hardware_Issue_Flag,Logical (Boolean),Flag indicating documented PC/EB power cut or cyclone disruption,TRUE or FALSE,FALSE
+Flag_PMRatio_Inversion,Logical (Boolean),Flag indicating physically anomalous condition where PM2.5 exceeds PM10 by >5%,TRUE or FALSE,FALSE
+Is_Suspicious,Logical (Boolean),Composite audit flag (Hardware issue OR physical inversion OR threshold violation),TRUE or FALSE,FALSE

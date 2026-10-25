@@ -1,0 +1,13 @@
+Stage,Pollutant,Records,Valid_Count,Missing_Count,Missing_Pct,Mean,Median,SD,IQR,P95,Delta_Mean,Delta_Median
+Before Cleaning (Raw Ingest),SO2,2975,2909,66,2.22,5.9,4.0,4.84,4.0,14.0,,
+After Cleaning (Deduplicated),SO2,2959,2893,66,2.23,5.9,4.0,4.83,4.0,14.0,0.0,0.0
+Before Cleaning (Raw Ingest),NO2,2975,2912,63,2.12,14.36,13.0,7.36,9.0,28.0,,
+After Cleaning (Deduplicated),NO2,2959,2896,63,2.13,14.34,13.0,7.34,9.0,28.0,-0.02,0.0
+Before Cleaning (Raw Ingest),CO,2975,2616,359,12.07,0.62,0.6,1.2,0.2,1.0,,
+After Cleaning (Deduplicated),CO,2959,2600,359,12.13,0.62,0.6,1.2,0.2,1.0,0.0,0.0
+Before Cleaning (Raw Ingest),PM2.5,2975,2904,71,2.39,27.55,22.0,19.44,22.0,63.0,,
+After Cleaning (Deduplicated),PM2.5,2959,2888,71,2.4,27.51,22.0,19.42,22.0,63.0,-0.04,0.0
+Before Cleaning (Raw Ingest),PM10,2975,2891,84,2.82,66.14,62.0,30.84,36.0,122.0,,
+After Cleaning (Deduplicated),PM10,2959,2875,84,2.84,66.01,62.0,30.81,36.0,122.0,-0.13,0.0
+Before Cleaning (Raw Ingest),AQI,2975,2907,68,2.29,67.09,62.0,32.36,37.0,123.0,,
+After Cleaning (Deduplicated),AQI,2959,2891,68,2.3,66.97,62.0,32.34,37.0,123.0,-0.12,0.0
