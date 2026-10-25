@@ -1,7 +1,7 @@
 # AQI TrustLens: Data-Quality-Aware Air Pollution Analysis Dashboard for Chennai
 
 ## 1. Project Overview & Abstract
-**AQI TrustLens** is an interactive, advanced data visualization system built in **R** and **Shiny** that analyzes historical ambient air quality in Chennai while systematically evaluating the reliability of underlying monitoring networks. Rather than treating open environmental telemetry as infallible or applying silent, destructive cleaning, TrustLens implements a transparent audit pipeline. It quantifies missingness, isolates duplicate entries, categorizes infrastructure failure annotations, flags physical aerosol inconsistencies, and illustrates the statistical impact of justified cleaning decisions.
+**AQI TrustLens** is an interactive, advanced data visualization and analytics system built in **R** and **Shiny** that analyzes historical ambient air quality in Chennai while systematically evaluating the reliability of underlying monitoring networks. Rather than treating open environmental telemetry as infallible or applying silent, destructive cleaning, TrustLens implements a transparent audit pipeline. It quantifies missingness, isolates duplicate entries, categorizes infrastructure failure annotations, flags physical aerosol inconsistencies, and illustrates the statistical impact of justified cleaning decisions.
 
 ---
 
@@ -91,7 +91,15 @@ The redesigned dashboard uses Shiny's top `navbarPage` layout with a clean acade
 
 ---
 
-## 7. Installation & Execution Guide
+## 7. Limitations & Analytic Scope
+While AQI TrustLens enhances data transparency, the following analytical constraints apply:
+- **Daily Aggregation Level:** Telemetry is analyzed at the 24-hour bulletin level; sub-hourly peaks or diurnal cycles are not captured.
+- **Sensor Sparsity:** Only five active Continuous Ambient Air Quality Monitoring Stations (CAAQMS) represent the greater Chennai metropolitan area (~426+ sq km), leaving suburban micro-climates unmonitored.
+- **Non-Destructive Flagging:** Potential physical discrepancies (e.g. $PM_{2.5} > PM_{10}$) are flagged for inspection rather than erased, allowing researchers to choose context-appropriate exclusion criteria.
+
+---
+
+## 8. Installation & Execution Guide
 
 ### Prerequisites
 - Install **R** ($\ge 4.2.0$) from [cran.r-project.org](https://cran.r-project.org/)
@@ -111,7 +119,7 @@ The redesigned dashboard uses Shiny's top `navbarPage` layout with a clean acade
 
 ---
 
-## 8. Summary of Recent Bugfixes & UI Overhaul
+## 9. Summary of Recent Bugfixes & UI Overhaul
 - **Navbar Page Structure:** Replaced nested/obscured tabsets with top-level `navbarPage` navigation to ensure all tabs are clearly separated, prominent, and clickable.
 - **Academic Light Workspace:** Swapped dark-mode text compression for a spacious, light-themed card layout with 14px typography and clear visual hierarchy.
 - **Schema Alignment:** Synchronized column naming across `data_cleaning.R`, `analysis.R`, and `app.R` with robust fallback aliases.
